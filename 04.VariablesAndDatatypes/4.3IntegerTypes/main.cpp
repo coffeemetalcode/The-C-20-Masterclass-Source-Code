@@ -1,70 +1,43 @@
 #include <iostream>
 
+int main() {
+  // braced initializers
+  // null -- may contain throwaway, gibberish value
+  int new_elephant;
 
-int main(){
+  // initializes to zero
+  int new_lion {};
 
-    //Braced initializers
-    /*
-    //Variable may contain random garbage value . WARNING
-    int elephant_count;
-    
-    int lion_count{};//Initializes to zero
-    
-    int dog_count {10}; //Initializes to 10
-    
-    int cat_count {15}; //Initializes to 15
-    
-    //Can use expression as initializer
-    int domesticated_animals { dog_count + cat_count };
+  int new_dog {10};
 
-    //
-    //int new_number{doesnt_exist};
+  int new_cat {15};
 
-   // int narrowing_conversion {2.9};//Compiler error
+  // initialize by expression
+  int domestic_animals { new_dog + new_cat };
 
-    std::cout << "Elephant count : " << elephant_count << std::endl;
-    std::cout << "Lion count : " << lion_count << std::endl;
-    std::cout << "Dog count : " << dog_count << std::endl;
-    std::cout << "Cat count : " << cat_count << std::endl;
-    std::cout << "Domesticated animal count : " << domesticated_animals << std::endl;
-   */
+  // int narrowing_conversion {2.9}; // <-- compile error 
+  double narrowing_conversion {2.9}; // <-- double type
 
+  int narrowing_conversion2 (2.9); // <-- parentheses initialization - no error or warning
+                                   // <-- value is cast to int with value 2, and no notification
 
+  int cast_from_double (narrowing_conversion);
 
+  int narrowing_conversion_assignment = 2.9;
 
-   //Functional Initialization
-   /*
-    int apple_count(5);
-    int orange_count(10);
-    int fruit_count (apple_count + orange_count);
-    //int bad_initialization ( doesnt_exist3 + doesnt_exist4 );
+  std::cout << "conversion 1: " << narrowing_conversion << std::endl;
+  std::cout << "conversion 2: " << narrowing_conversion2 << std::endl;
+  std::cout << "conversion 3: " << narrowing_conversion_assignment << std::endl;
+  std::cout << "conversion 3: " << cast_from_double << std::endl;
 
-    //Information lost. less safe than braced initializers
-    int narrowing_conversion_functional (2.9);
-    
-    
-    std::cout << "Apple count : " << apple_count << std::endl;
-    std::cout << "Orange count : " << orange_count << std::endl;
-    std::cout << "Fruit count : " << fruit_count << std::endl;
-    std::cout << "Narrowing conversion : " << narrowing_conversion_functional << std::endl;//Will loose info
-    */
+  // Check size with sizeof
+  std::cout << "size of int: " << sizeof(int) << std::endl;
+  std::cout << "size of new_cat: " << sizeof(new_cat) << std::endl;
+  std::cout << "size of boolean: " << sizeof(bool) << std::endl;
+  std::cout << "size of double: " << sizeof(double) << std::endl;
+  std::cout << "size of narrowing_conversion: " << sizeof(narrowing_conversion) << std::endl;
+  std::cout << "size of narrowing_conversion2: " << sizeof(narrowing_conversion2) << std::endl;
 
-
-   //Assignment notation
-    
-    int bike_count = 2;
-    int truck_count = 7;
-    int vehicle_count = bike_count +truck_count;
-    int narrowing_conversion_assignment = 2.9;
-
-    std::cout << "Bike count : " << bike_count << std::endl;
-    std::cout << "Truck count : " << truck_count << std::endl;
-    std::cout << "Vehicle count : " << vehicle_count << std::endl;
-    std::cout << "Narrowing conversion : " << narrowing_conversion_assignment << std::endl;
-    
-
-    //Check the size with sizeof
-    std::cout << "sizeof int : " << sizeof(int) << std::endl;
-    std::cout << "sizeof truck_count : " << sizeof(truck_count) << std::endl;
-    return 0;
+  //
+  return 0;
 }
