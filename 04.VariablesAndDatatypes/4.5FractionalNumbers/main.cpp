@@ -1,8 +1,6 @@
 #include <iostream>
 #include <iomanip>
 
-// jump back in https://youtu.be/8jLOx1hD3_o?t=14045
-
 int main()
 {
 
@@ -38,16 +36,22 @@ int main()
 
   double number5{192400023};
   double number6{1.92400023e8};
-  double number7{1.924e8}; // Can ommit the lower 00023
+  double number7{1.924e8}; // Can omit the lower 00023
                            // for simplicity if our application allows that.
   double number8{0.00000000003498};
   double number9{3.498e-11}; // multiply with 10 exp(-11)
+
+  long double number13{0.00000000003498L};
+  long double number14{3.498e-11L};
 
   std::cout << "number5 is : " << number5 << std::endl;
   std::cout << "number6 is : " << number6 << std::endl;
   std::cout << "number7 is : " << number7 << std::endl;
   std::cout << "number8 is : " << number8 << std::endl;
   std::cout << "number9 is : " << number9 << std::endl;
+
+  std::cout << "number13 is : " << number13 << std::endl;
+  std::cout << "number14 is : " << number14 << std::endl;
 
   // Infinity and Nan
   std::cout << std::endl;
