@@ -1,37 +1,37 @@
 #include <iostream>
 
+// start chapter 4 -- https://youtu.be/8jLOx1hD3_o?t=17213
 
-int main(){
-   
-   //Addition
-   int number1{2};
-   int number2{7};
+int main()
+{
 
-   int result = number1 + number2;
-   std::cout << "result : " << result << std::endl;
+  // Addition
+  int number1{2};
+  int number2{7};
 
-    //Subtraction
-    result = number2 - number1 ;
-   std::cout << "result : " << result << std::endl;
+  int result = number1 + number2;
+  std::cout << "result : " << result << std::endl;
 
-   result = number1 - number2;
-   std::cout << "result : " << result << std::endl;
+  // Subtraction
+  result = number2 - number1;
+  std::cout << "result : " << result << std::endl;
 
-   //Multiplication
-   result = number1 * number2;
-   std::cout << "result : " << result << std::endl;
+  result = number1 - number2;
+  std::cout << "result : " << result << std::endl;
 
+  // Multiplication
+  result = number1 * number2;
+  std::cout << "result : " << result << std::endl;
 
-   //Division
-   result = number2 / number1;
-   std::cout << "result : " << result << std::endl;
+  // Division
+  result = number2 / number1;
+  std::cout << "result : " << result << std::endl;
 
+  // Modulus
+  result = number2 % number1;                      // 7 % 2
+  std::cout << "result : " << result << std::endl; // 1
 
-   //Modulus
-   result = number2 % number1; // 7 % 2
-   std::cout << "result : " << result << std::endl; // 1
-
-   result = 31 % 10;
-   std::cout << "result : " << result << std::endl; // 1
-    return 0;
+  result = 31 % 10;
+  std::cout << "result : " << result << std::endl; // 1
+  return 0;
 }
