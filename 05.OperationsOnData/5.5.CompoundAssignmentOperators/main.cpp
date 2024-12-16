@@ -7,7 +7,14 @@ int main(){
     std::cout << "The value is : " << value << std::endl;
     
     std::cout << std::endl;
+
     value = value + 5;
+    std::cout << "value = value + 5 : " << value << std::endl; // 50
+
+    value = 45;
+
+    std::cout << std::endl;
+    value +=5;
     //value +=5; // equivalent to value = value + 5
     std::cout << "The value is (after +=5) : " << value << std::endl; // 50
 
