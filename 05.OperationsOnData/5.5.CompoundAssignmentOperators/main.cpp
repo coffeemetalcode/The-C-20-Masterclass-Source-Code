@@ -1,5 +1,7 @@
 #include <iostream>
 
+// jump back in --> https://youtu.be/8jLOx1hD3_o?t=19406
+
 int main(){
     
 	int value {45};
@@ -32,6 +34,11 @@ int main(){
 
     std::cout << std::endl;
     value %= 11;
-    std::cout << "The value is (after %=11) : " << value << std::endl;// 8
+    std::cout << "The value is (after %=11) : " << value << std::endl; // 8
+
+    std::cout << std::endl;
+    value = 45;
+    value /= 5;
+    std::cout << "The value after /= 5 is : " << value << std::endl; // 9
     return 0;
 }
