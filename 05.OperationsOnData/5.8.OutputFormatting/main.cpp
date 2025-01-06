@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 
+// https://youtu.be/8jLOx1hD3_o?t=21369
 
 int main(){
 

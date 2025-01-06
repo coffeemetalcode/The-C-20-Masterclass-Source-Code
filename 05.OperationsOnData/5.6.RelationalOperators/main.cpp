@@ -30,5 +30,10 @@ int main()
 
   std::cout << number1 << " == " << number2 << " : " << result << std::endl;
 
+  std::cout << std::endl;
+  // this works!
+  std::cout << "compare whether two strings are equal" << std::endl;
+  std::cout << "string == string: " << ("string" == "string") << std::endl;
+
   return 0;
 }
